@@ -1,6 +1,4 @@
-﻿using System.Security.Principal;
-
-namespace PersonalBudgetManager.Models
+﻿namespace PersonalBudgetManager.Models
 {
     public class User
     {
