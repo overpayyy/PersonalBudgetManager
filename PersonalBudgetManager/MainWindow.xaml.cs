@@ -13,5 +13,10 @@ namespace PersonalBudgetManager
             ViewModel = new MainViewModel();
             DataContext = ViewModel;
         }
+
+        private void AddTransaction_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Tu będzie formularz dodawania transakcji.");
+        }
     }
 }

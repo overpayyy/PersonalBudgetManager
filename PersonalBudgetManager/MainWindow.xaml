@@ -7,6 +7,23 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <DataGrid ItemsSource="{Binding Transactions}" AutoGenerateColumns="False" Grid.Row="0" Margin="0,0,0,10">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Date" Binding="{Binding Date, StringFormat=d}" Width="*"/>
+                    <DataGridTextColumn Header="Category" Binding="{Binding Category.Name}" Width="*"/>
+                    <DataGridTextColumn Header="Description" Binding="{Binding Description}" Width="2*"/>
+                    <DataGridTextColumn Header="Amount" Binding="{Binding Amount}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <Button Content="Dodaj transakcję" Width="150" Height="30" Grid.Row="1" HorizontalAlignment="Right" Click="AddTransaction_Click"/>
+        </Grid>
 
     </Grid>
 </Window>
