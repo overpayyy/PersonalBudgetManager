@@ -19,7 +19,11 @@ namespace PersonalBudgetManager
 
         private void AddTransaction_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Tu będzie formularz dodawania transakcji.");
+            var addWindow = new AddTransactionWindow();
+            if (addWindow.ShowDialog() == true)
+            {
+                ViewModel.LoadTransactions();
+            }
         }
     }
 }

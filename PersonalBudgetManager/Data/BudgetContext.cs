@@ -21,7 +21,7 @@ namespace PersonalBudgetManager.Data
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<Category>().HasData(
-                new Category { Id = 1, Name = "Foof", Type = "Expense" },
+                new Category { Id = 1, Name = "Food", Type = "Expense" },
                 new Category { Id = 2, Name = "Salary", Type = "Income" }
             );
         }

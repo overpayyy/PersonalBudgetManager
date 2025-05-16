@@ -14,7 +14,7 @@ namespace PersonalBudgetManager.ViewModels
             LoadTransactions();
         }
 
-        private void LoadTransactions()
+        public void LoadTransactions()
         {
             using (var db = new BudgetContext())
             {
