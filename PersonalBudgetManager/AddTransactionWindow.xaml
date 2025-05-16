@@ -1,0 +1,36 @@
+﻿<Window x:Class="PersonalBudgetManager.AddTransactionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Dodaj transakcję" Height="300" Width="400">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock Text="Kategoria:" Width="80"/>
+            <ComboBox x:Name="CategoryComboBox" Width="250"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10" Grid.Row="1">
+            <TextBlock Text="Kwota:" Width="80"/>
+            <TextBox x:Name="AmountTextBox" Width="250"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10" Grid.Row="2">
+            <TextBlock Text="Data:" Width="80"/>
+            <DatePicker x:Name="DatePicker" Width="250"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10" Grid.Row="3">
+            <TextBlock Text="Opis:" Width="80"/>
+            <TextBox x:Name="DescriptionTextBox" Width="250"/>
+        </StackPanel>
+
+        <Button Content="Zapisz" Width="100" Height="30" Grid.Row="4" HorizontalAlignment="Right" Click="SaveButton_Click"/>
+    </Grid>
+</Window>
