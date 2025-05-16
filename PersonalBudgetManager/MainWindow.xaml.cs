@@ -10,6 +10,9 @@ namespace PersonalBudgetManager
         public MainWindow()
         {
             InitializeComponent();
+
+            PersonalBudgetManager.Data.BudgetContext.InitializeDatabase();
+
             ViewModel = new MainViewModel();
             DataContext = ViewModel;
         }
